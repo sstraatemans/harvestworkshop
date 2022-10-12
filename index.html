@@ -7,7 +7,7 @@
     <title>Frontend ToDo list</title>
   </head>
   <body>
-    <main id="app">
+    <main>
       <header>
         <nav class="margin">
           <ul>
@@ -20,11 +20,7 @@
       <section class="list-wrapper margin">
         <article class="listportion">
           <h1><a name="todo">Our todo app</a></h1>
-          <todo-list></todo-list>
-          <form>
-            <input type="text" maxlength="20" placeholder="What to do?" />
-            <button type="submit">Add to list</button>
-          </form>
+          <div id="app"></div>
         </article>
         <aside class="side">
           <h2>What to do?</h2>
@@ -45,24 +41,8 @@
       </footer>
     </main>
 
-    <script>
-      const init = () => {
-        const list = document.querySelector('todo-list');
-        const input = document.querySelector('input');
-        const form =  document.querySelector('form');
-        input.focus();
+    
 
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          const value = input.value;
-
-          list.setAttribute("item", value);
-          input.value = "";
-        });
-      };
-
-      window.addEventListener('load', init);
-    </script>
-    <script src="src/todo-list.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>

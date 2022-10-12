@@ -79,22 +79,6 @@ nav ul > li a:hover {
   width: 100%;
 }
 
-form {
-  display: flex;
-  column-gap: 10px;
-}
-
-form input {
-  flex: 1;
-  line-height: 40px;
-  padding: 0 5px;
-  font-size: 18px;
-}
-
-form button {
-  cursor: pointer;
-}
-
 @media only screen and (min-width: 700px) {
   .margin {
     width: 680px;
