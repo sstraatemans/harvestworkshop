@@ -79,23 +79,6 @@ nav ul > li a:hover {
   width: 100%;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-}
-
-.list li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 40px;
-  border-bottom: 1px solid lightgray;
-}
-
-.list li button {
-  cursor: pointer;
-}
-
 form {
   display: flex;
   column-gap: 10px;
