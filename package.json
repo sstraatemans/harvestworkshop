@@ -1,0 +1,25 @@
+{
+  "name": "frontend_masterclass",
+  "version": "1.0.0",
+  "description": "Masterclass",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/harvestbv/202002-mc-web-frontend.git"
+  },
+  "author": "Randy Daal & Steven Straatemans",
+  "contributors": [
+    "Randy Daal <randy@frontmen.nl>",
+    "Steven Straatemans <steven@straatemans.nl>"
+  ]
+}
