@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./src/styles.css" />
     <title>Frontend ToDo list</title>
   </head>
   <body>
     <main id="app">
       <header>
-        <nav>
+        <nav class="margin">
           <ul>
             <li><a href="/">home</a></li>
             <li><a href="/#todo">todo app</a></li>
@@ -16,10 +17,10 @@
           </ul>
         </nav>
       </header>
-      <section>
-        <article>
+      <section class="list-wrapper margin">
+        <article class="listportion">
           <h1><a name="todo">Our todo app</a></h1>
-          <ul>
+          <ul class="list">
             <li>Create CSS</li>
             <li>Add CSS to an external stylesheet</li>
             <li>???</li>
@@ -39,7 +40,7 @@
         </aside>
       </section>
       <footer>
-        <div>
+        <div class="margin">
           <h3>Contact info</h3>
           <address>
             Hoofdstraat 25<br />
