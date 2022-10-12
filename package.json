@@ -4,14 +4,33 @@
   "description": "Masterclass",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "build": "webpack --mode development",
+    "start": "npm run build && node server.js",
+    "develop": "npm run build && nodemon server.js"
   },
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@material-ui/core": "4.11.0",
+    "compression": "1.7.4",
+    "express": "4.17.1",
+    "html-webpack-plugin": "4.3.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.2.0",
+    "webpack": "4.44.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "@babel/core": "^7.10.5",
+    "@babel/runtime": "^7.10.5",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "6.0.3",
+    "file-loader": "6.0.0",
+    "nodemon": "2.0.4",
+    "webpack-cli": "3.3.12"
+  },
+  "engines": {
+    "node": "8.11.3"
   },
   "repository": {
     "type": "git",
