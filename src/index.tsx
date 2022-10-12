@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Form from './components/Form';
 import List from './components/List';
 
-const App = () => {
+const App: React.FC = () => {
   const [values, setValues] = useState([
     'Create CSS',
     'Add CSS to an external stylesheet',
@@ -11,11 +11,11 @@ const App = () => {
     'Profit!',
   ]);
 
-  const handleAdd = (value) => {
+  const handleAdd = (value: string): void => {
     setValues((prev) => [...prev, value]);
   };
 
-  const onDelete = (value) => {
+  const onDelete = (value: string): void => {
     setValues((prev) => {
       const array = [...prev];
       const idx = array.indexOf(value);
