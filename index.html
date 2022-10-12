@@ -20,12 +20,7 @@
       <section class="list-wrapper margin">
         <article class="listportion">
           <h1><a name="todo">Our todo app</a></h1>
-          <ul class="list">
-            <li>Create CSS</li>
-            <li>Add CSS to an external stylesheet</li>
-            <li>???</li>
-            <li>Profit!</li>
-          </ul>
+          <ul id="list" class="list"></ul>
           <form>
             <input type="text" maxlength="20" placeholder="What to do?" />
             <button type="submit">Add to list</button>
@@ -34,7 +29,7 @@
         <aside class="side">
           <h2>What to do?</h2>
           <p>
-            This is some extra info about our to-do app.<br />
+            This is some extra info about our to-do app.<br/>
             You can create some great lists with this.
           </p>
         </aside>
@@ -43,11 +38,65 @@
         <div class="margin">
           <h3>Contact info</h3>
           <address>
-            Hoofdstraat 25<br />
+            Hoofdstraat 25<br/>
             3971 KA Driebergen-Rijsenburg
           </address>
         </div>
       </footer>
     </main>
+
+    <script>
+      const values = ['Create CSS', 'Add CSS to an external stylesheet', '???', 'Profit!'];
+      let list, input, form;
+
+      const setValues = (values, list) => {
+        const liElms = list.querySelectorAll('li');
+        liElms.forEach(li => {
+          li.remove();
+        })
+
+        values.forEach((val, idx) => {
+            createItem(val);
+        });
+      }
+
+      const createItem = val => {
+        const li = document.createElement('li');
+        const button = document.createElement('button');
+        button.innerText = 'delete';
+        li.innerText = val;
+        li.key = val;
+        li.appendChild(button);
+        list.appendChild(li);
+
+        button.addEventListener('click', removeElement);
+      }
+  
+      const removeElement = (e) => {
+        const value = e.target.parentElement.key;
+        const idx = values.indexOf(value);
+        values.splice(idx, 1);
+        setValues(values, list);
+      }
+
+      const init = () => {
+        list = document.querySelector('#list');
+        input = document.querySelector('input');
+        form =  document.querySelector('form');
+        input.focus();
+
+        setValues(values, list);
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const value = input.value;
+          values.push(value);
+          setValues(values, list);
+          input.value = '';
+        });
+      };
+
+      window.addEventListener('load', init);
+    </script>
   </body>
 </html>
